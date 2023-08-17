@@ -1,0 +1,252 @@
+@import './mixins';
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: 'Kanit', sans-serif;
+}
+
+.wrapper {
+	margin: 0 auto;
+	max-width: 120rem;
+}
+
+.section-title {
+	padding-top: 3rem;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.underline {
+	@include underline;
+}
+
+.active {
+	display: flex;
+}
+
+.burger-btn {
+	top: 0.5rem;
+	right: 0.5rem;
+	color: black;
+	@include burger-menu;
+}
+
+nav {
+	@include nav-mobile;
+	flex-direction: column-reverse;
+	.return-site {
+		position: absolute;
+		top: 1rem;
+		left: 1rem;
+		padding-left: 1rem;
+		color: white;
+		font-size: 1.8rem;
+		font-weight: bold;
+		text-decoration: none;
+		cursor: pointer;
+	}
+
+	.return-site:hover {
+		color: darkcyan;
+	}
+}
+
+main {
+	.preparatory-exercises {
+		.prepare-exercise-body {
+			margin: 3rem;
+			.prepare-description {
+				font-size: 1.4rem;
+			}
+			.exercises-box {
+				display: flex;
+				justify-content: space-between;
+				ul {
+					margin-left: 4rem;
+					font-size: 1.4rem;
+					text-transform: uppercase;
+					li {
+						padding: 0.7rem;
+					}
+				}
+				img {
+					margin-right: 4rem;
+					height: 240px;
+				}
+			}
+		}
+	}
+	.training {
+		@include training-mobile;
+	}
+
+	.training-plans {
+		margin-bottom: 2rem;
+		.all-plans-body {
+			display: flex;
+			justify-content: space-evenly;
+			flex-wrap: wrap;
+			margin-bottom: 5rem;
+			.plan-box {
+				position: relative;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				margin-top: 4rem;
+				width: 30rem;
+				background-color: white;
+				border-radius: 1.5rem;
+				box-shadow: 0.8rem 0.8rem 2.4rem 0 rgba(66, 68, 90, 1);
+				.plan-training-img {
+					padding-top: 1.5rem;
+					height: 15rem;
+				}
+				.plan-training-text {
+					position: relative;
+					text-align: center;
+					font-size: 1.4rem;
+					.plan-title {
+						padding: 1rem 3rem;
+						text-transform: uppercase;
+					}
+					.text-item {
+						padding: 1rem;
+						font-weight: bold;
+						text-transform: uppercase;
+						span {
+							padding-left: 1rem;
+							color: cadetblue;
+							font-weight: 300;
+						}
+					}
+					.text-item:last-child {
+						padding-bottom: 3rem;
+					}
+				}
+				.plan-training-text::before {
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					height: 0.2rem;
+					width: 100%;
+					background-color: rgba(90, 89, 89, 0.7);
+					content: '';
+					z-index: 100;
+				}
+				.fa-eye {
+					padding-top: 0.5rem;
+					font-size: 3.6rem;
+					cursor: pointer;
+					z-index: 10;
+				}
+				.plan-description {
+					position: absolute;
+					display: flex;
+					align-items: center;
+					flex-direction: column;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					background-color: rgba(0, 0, 0, 0.85);
+					color: white;
+					border-radius: 1.5rem;
+					font-size: 1.2rem;
+					clip-path: circle(0 at 50% 90%);
+					transition: 1s;
+					p {
+						padding: 2rem 1rem;
+						text-align: center;
+					}
+					.type {
+						font-size: 1.6rem;
+						span {
+							padding: 1rem;
+							color: darkcyan;
+						}
+					}
+					li {
+						padding: 1rem;
+						padding-bottom: 3rem;
+					}
+					table {
+						tr {
+							td {
+								padding: 0.5rem .7rem;
+								text-align: center;
+							}
+						}
+					}
+				}
+				.fa-eye:hover ~ .plan-description {
+					clip-path: circle(120% at 50% 90%);
+				}
+			}
+		}
+	}
+}
+
+footer {
+	@include footer;
+}
+
+@media (min-width: 576px) {
+	main {
+		.training {
+			.training-body {
+				.training-exercises {
+					.exercise-description {
+						.exercise-box {
+							width: 50rem;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.burger-btn {
+		display: none;
+	}
+	nav {
+		justify-content: flex-end;
+		.logo-site {
+			margin-right: 2rem;
+		}
+		.menu-items {
+			margin-right: 5rem;
+		}
+		.return-site {
+			top: 0;
+			left: 0;
+			padding-left: 3rem;
+		}
+		@include nav-computer;
+	}
+	main {
+		margin-top: 10rem;
+		.training {
+			@include training-768;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	main {
+		.training {
+			@include training-992;
+		}
+	}
+}

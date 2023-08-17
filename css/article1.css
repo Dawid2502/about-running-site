@@ -1,0 +1,271 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  font-family: "Kanit", sans-serif;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 120rem;
+}
+
+.paragraph-title {
+  padding: 2rem 1rem 2rem 1rem;
+  font-size: 2.4rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.85);
+  line-height: 50px;
+}
+nav .logo-site {
+  display: flex;
+  color: white;
+}
+nav .logo-site .site-title {
+  padding: 0 1rem;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+}
+nav .logo-site i {
+  font-size: 2.8rem;
+  font-weight: bold;
+  text-align: center;
+  line-height: 50px;
+}
+nav .logo-site span {
+  color: darkcyan;
+}
+nav .menu-items .item {
+  padding: 1.5rem;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+nav .return-site {
+  padding-left: 3rem;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+main {
+  margin-top: 2rem;
+}
+main h1 {
+  padding-left: 3rem;
+  padding-bottom: 2rem;
+  text-align: left;
+  font-size: 3.2rem;
+}
+main .introduction {
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+  margin-top: 2rem;
+}
+main .introduction .intro-text {
+  padding: 1.5rem;
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+main .introduction .intro-img {
+  margin: 1.5rem;
+  width: 30rem;
+}
+main .contents {
+  display: flex;
+  flex-direction: column;
+}
+main .contents .paragraphs .paragraph {
+  padding: 0.5rem;
+  padding-left: 1rem;
+  font-size: 1.4rem;
+  list-style: none;
+}
+main .contents .paragraphs .paragraph a {
+  color: black;
+  text-decoration: none;
+  transition: -webkit-text-decoration 0.5s;
+  transition: text-decoration 0.5s;
+  transition: text-decoration 0.5s, -webkit-text-decoration 0.5s;
+  cursor: pointer;
+}
+main .contents .paragraphs .paragraph a:hover {
+  text-decoration: underline;
+}
+main .watch-price p {
+  padding: 1rem;
+  font-size: 1rem;
+}
+main .watch-price .img-box {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 3rem 0;
+}
+main .watch-price .img-box img {
+  width: 12rem;
+}
+main .watch-function p {
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+main .watch-function .function-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 1rem;
+  border: 1px solid black;
+  border-radius: 1.5rem;
+}
+main .watch-function .function-box .text-box {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+main .watch-function .function-box .text-box h3 {
+  padding: 0.5rem;
+  text-align: center;
+}
+main .watch-function .function-box .text-box p {
+  margin: 0;
+}
+main .watch-function .function-box img {
+  margin: 1rem;
+  width: 6rem;
+  height: 6rem;
+}
+main .summary p {
+  font-size: 1rem;
+  line-height: 1.6rem;
+  padding: 1rem;
+}
+
+footer {
+  margin-top: 10px;
+  background: rgb(44, 43, 43);
+}
+footer p {
+  margin: 0;
+  padding: 1.5rem;
+  color: white;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+@media (min-width: 576px) {
+  nav {
+    height: 6rem;
+    line-height: 6rem;
+  }
+  nav .logo-site .site-title {
+    font-size: 1.8rem;
+  }
+  nav .logo-site i {
+    font-size: 3.6rem;
+    line-height: 6rem;
+  }
+  nav .menu-items .item {
+    font-size: 1.8rem;
+  }
+  nav .return-site {
+    font-size: 1.8rem;
+  }
+}
+@media (min-width: 768px) {
+  main .introduction .intro-text {
+    font-size: 1.2rem;
+  }
+  main .introduction .intro-img {
+    margin: 1.5rem;
+    width: 36rem;
+  }
+  main .watch-price p {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+  }
+  main .watch-price .img-box img {
+    width: 20rem;
+  }
+  main .watch-function p {
+    margin-bottom: 3rem;
+  }
+  main .watch-function .function-box .text-box h3 {
+    font-size: 1.4rem;
+  }
+  main .watch-function .function-box .text-box p {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+  }
+  main .watch-function .function-box img {
+    width: 16rem;
+    height: 16rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  main .summary p {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+  }
+}
+@media (min-width: 992px) {
+  main .introduction {
+    align-items: center;
+    flex-direction: row;
+  }
+  main .introduction .intro-text {
+    font-size: 1.4rem;
+  }
+  main .introduction .intro-img {
+    width: 46rem;
+  }
+  main .watch-price p {
+    font-size: 1.4rem;
+  }
+  main .watch-price .img-box img {
+    width: 24rem;
+  }
+  main .watch-function p {
+    font-size: 1.4rem;
+  }
+  main .watch-function .function-box {
+    flex-direction: row;
+  }
+  main .watch-function .function-box .text-box h3 {
+    font-size: 1.4rem;
+  }
+  main .watch-function .function-box .text-box p {
+    font-size: 1.2rem;
+  }
+  main .watch-function .function-box img {
+    width: 16rem;
+    height: 14rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  main .summary p {
+    font-size: 1.4rem;
+  }
+}/*# sourceMappingURL=article1.css.map */

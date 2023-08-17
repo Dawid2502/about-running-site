@@ -1,0 +1,807 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.section-title {
+  padding-top: 3rem;
+  font-size: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.underline {
+  margin: 0 auto 40px;
+  width: 10rem;
+  height: 4px;
+  background-color: darkcyan;
+}
+
+.active {
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}
+
+.rotate-arrow {
+  transform: rotate(180deg);
+}
+
+.burger-btn {
+  top: 0.5rem;
+  left: 0.5rem;
+  color: white;
+  position: absolute;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 11;
+}
+.burger-btn .fa-bars,
+.burger-btn .fa-xmark {
+  padding: 0.5rem;
+  font-size: 3.6rem;
+}
+.burger-btn .hide {
+  display: none;
+  color: white;
+}
+
+nav {
+  flex-direction: column;
+  position: absolute;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 10;
+}
+nav .logo-site {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+nav .logo-site i {
+  padding-bottom: 1.5rem;
+  font-size: 6.4rem;
+}
+nav .logo-site .site-title {
+  margin: 0;
+  padding-bottom: 6rem;
+  color: white;
+  font-size: 4.8rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+nav .logo-site .site-title span {
+  color: darkcyan;
+}
+nav .menu-items {
+  display: flex;
+  flex-direction: column;
+}
+nav .menu-items .item {
+  padding: 1.5rem;
+  color: white;
+  font-size: 2.4rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  transform: translateX(60rem);
+  animation: menu-animation 2s forwards;
+}
+nav .menu-items .item:nth-child(1) {
+  animation-delay: 0.4s;
+}
+nav .menu-items .item:nth-child(2) {
+  animation-delay: 0.6s;
+}
+nav .menu-items .item:nth-child(3) {
+  animation-delay: 0.8s;
+}
+nav .menu-items .item:nth-child(4) {
+  animation-delay: 1s;
+}
+nav .menu-items .item:nth-child(5) {
+  animation-delay: 1.2s;
+}
+nav .menu-items .item:nth-child(6) {
+  animation-delay: 1.4s;
+}
+@keyframes menu-animation {
+  from {
+    transform: translateX(60rem);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+header {
+  height: 100vh;
+}
+header .head-img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url(../image/running-6252827_640.jpg);
+  background-position: 65% 0;
+  background-size: cover;
+  font-family: "Kanit", sans-serif;
+}
+header .head-img .head-text {
+  position: absolute;
+  top: 40%;
+  left: 5%;
+  width: 30em;
+  color: white;
+  z-index: 1;
+}
+header .head-img .head-text .main-title {
+  font-size: 3.6rem;
+}
+header .head-img .head-text .main-title span {
+  color: darkcyan;
+}
+header .head-img .head-text p {
+  padding-top: 2em;
+  font-size: 2rem;
+}
+header .head-img::after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  content: "";
+  z-index: 0;
+}
+
+main .wrapper {
+  margin: 0 auto;
+  max-width: 120rem;
+}
+main .exercises-section .card {
+  position: relative;
+  box-shadow: 0.5rem 0.5rem 0.5rem #333;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+main .exercises-section .card .card-body {
+  background-color: rgb(226, 225, 225);
+}
+main .exercises-section .card .card-body a {
+  color: black;
+  text-decoration: none;
+}
+main .exercises-section .card .card-body a .card-title {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+main .exercises-section .card .card-body a p {
+  font-size: 1.2rem;
+}
+main .exercises-section .card:hover {
+  transform: scale(1.02);
+}
+main .exercises-section .carousel-item {
+  position: relative;
+  margin-top: 3rem;
+  height: 50rem;
+}
+main .exercises-section .carousel-item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 0 0;
+     object-position: 0 0;
+}
+main .exercises-section .carousel-item .carousel-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+}
+main .exercises-section .carousel-item .carousel-caption a {
+  color: white;
+  text-decoration: none;
+}
+main .exercises-section .carousel-item .carousel-caption a h5 {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+main .exercises-section .carousel-item .carousel-caption a p {
+  font-size: 1.2rem;
+  padding-bottom: 2rem;
+}
+main .exercises-section .carousel-indicators {
+  padding-right: auto;
+}
+main .exercises-section .carousel-indicators button {
+  height: 0.5rem;
+  width: 5rem;
+}
+main .run-calendar .calendar-events {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 5rem;
+}
+main .run-calendar .calendar-events .calendar {
+  width: 30rem;
+  background-color: rgb(226, 225, 225);
+  border-radius: 1.5rem;
+}
+main .run-calendar .calendar-events .calendar .current-date {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(44, 43, 43);
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+  text-align: center;
+}
+main .run-calendar .calendar-events .calendar .current-date i {
+  margin: 0 1rem;
+  color: white;
+  cursor: pointer;
+}
+main .run-calendar .calendar-events .calendar .current-date .fa-chevron-left::before,
+main .run-calendar .calendar-events .calendar .current-date .fa-chevron-right::before {
+  font-size: 3rem;
+}
+main .run-calendar .calendar-events .calendar .current-date h2,
+main .run-calendar .calendar-events .calendar .current-date p {
+  padding: 3rem 2rem;
+  color: white;
+  font-size: 2rem;
+}
+main .run-calendar .calendar-events .calendar .cal-weekdays {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+main .run-calendar .calendar-events .calendar .cal-weekdays .weekday {
+  margin: 0.5rem;
+  width: 4rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+main .run-calendar .calendar-events .calendar .month-days {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+main .run-calendar .calendar-events .calendar .month-days .day {
+  margin-top: 0.3rem;
+  width: 4rem;
+  height: 4rem;
+  background: rgb(240, 238, 238);
+  font-size: 1.5rem;
+  line-height: 4rem;
+  cursor: pointer;
+}
+main .run-calendar .calendar-events .calendar .month-days .day:hover {
+  background-color: #b9adad;
+}
+main .run-calendar .calendar-events .events-description {
+  margin: 2rem;
+  height: 20rem;
+  width: 30rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 0 2rem #6b6b6b;
+}
+main .run-calendar .calendar-events .events-description .event-text {
+  padding: 1rem 2rem;
+  font-size: 2rem;
+}
+main .run-calendar .inactive-day {
+  opacity: 0.6;
+}
+main .diet .calorie-calculator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 5rem;
+}
+main .diet .calorie-calculator .calc-text {
+  width: 30rem;
+  background-color: rgb(240, 238, 238);
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+}
+main .diet .calorie-calculator .calc-text .calc-title {
+  padding-top: 0.5rem;
+  text-align: center;
+}
+main .diet .calorie-calculator .calc-text p {
+  margin: 0;
+  font-size: 1.2rem;
+}
+main .diet .calorie-calculator .calc-calorie-btn {
+  padding: 0.5rem 3rem;
+  width: 30rem;
+  background-color: darkcyan;
+  border: none;
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  font-size: 16px;
+}
+main .diet .diet-category {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main .diet .diet-category .diet-category-box {
+  position: relative;
+  margin: 2rem 1rem;
+  height: 15rem;
+  width: 30rem;
+  background-size: cover;
+  background-position: center;
+  border-radius: 1.5rem;
+  transition: transform 0.5s;
+}
+main .diet .diet-category .diet-category-box .diet-category-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 1.5rem;
+}
+main .diet .diet-category .diet-category-box .diet-category-text a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: white;
+  line-height: 100%;
+  text-align: center;
+  font-size: 3rem;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  z-index: 5;
+}
+main .diet .diet-category .diet-category-box .diet-category-text a:hover {
+  color: darkcyan;
+}
+main .diet .diet-category .breakfast {
+  background-image: url(../image/sniadanie_small.jpg);
+}
+main .diet .diet-category .dinner {
+  background-image: url(../image/obiad_small.jpg);
+}
+main .diet .diet-category .afterDinner {
+  background-image: url(../image/kolacja_small.jpg);
+}
+main .diet .diet-category .afterTraining {
+  background-image: url(../image/po_treningu_small.jpg);
+}
+main .blog {
+  background-color: rgb(240, 238, 238);
+}
+main .blog .blog-body {
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+}
+main .blog .blog-body .blog-description {
+  width: 30rem;
+  text-align: center;
+}
+main .blog .blog-body .blog-description div {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 1.8rem;
+  font-size: 2.4rem;
+}
+main .blog .blog-body .blog-description div p {
+  padding: 0 1.5rem;
+}
+main .blog .blog-body .blog-description div::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.3rem;
+  background-color: black;
+  content: "";
+}
+main .blog .blog-body .blog-description .blog-text {
+  padding-top: 1rem;
+  font-size: 1.4rem;
+}
+main .blog .blog-body .blog-description .blog-btn {
+  margin-bottom: 2rem;
+  padding: 0.5rem 0;
+  width: 100%;
+  background-color: darkcyan;
+  border: none;
+  border-radius: 1.5rem;
+  font-size: 1.8rem;
+  transition: background-color 0.5s;
+}
+main .blog .blog-body .blog-description .blog-btn:hover {
+  background-color: rgb(1, 168, 168);
+}
+main .blog .blog-body img {
+  width: 30rem;
+}
+main .gallery .gallery-body .gallery-images {
+  display: flex;
+  justify-content: space-evenly;
+}
+main .gallery .gallery-body .gallery-images .gallery-img {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 0.7rem;
+}
+main .gallery .gallery-body .see-more-link {
+  display: block;
+  width: 100%;
+  margin-top: 1rem;
+  padding: 1rem 3rem;
+  color: black;
+  font-size: 1.4rem;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+footer {
+  margin-top: 10px;
+  background: rgb(44, 43, 43);
+}
+footer p {
+  margin: 0;
+  padding: 1.5rem;
+  color: white;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.popup-calculator {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background-color: rgb(224, 224, 224);
+  border-radius: 1.5rem;
+  transform: translate(-50%, -50%);
+  z-index: 9;
+}
+.popup-calculator .calculator-title {
+  padding: 1rem 1rem;
+}
+.popup-calculator label {
+  font-size: 1.2rem;
+}
+.popup-calculator input,
+.popup-calculator select {
+  height: 2.5rem;
+}
+.popup-calculator .male-female #male,
+.popup-calculator .male-female #female {
+  height: 1.5rem;
+  width: 1.5rem;
+  margin: 0.5rem 0.5rem;
+}
+.popup-calculator .person-data #age,
+.popup-calculator .person-data #weight,
+.popup-calculator .person-data #height {
+  width: 4rem;
+}
+.popup-calculator #level-activity {
+  margin: 0 1rem;
+  width: 320px;
+}
+.popup-calculator .male-female,
+.popup-calculator .person-data,
+.popup-calculator .count-calorie-btn,
+.popup-calculator label {
+  margin: 0.5rem 0.5rem;
+}
+.popup-calculator .calculator-btns .count-calorie-btn,
+.popup-calculator .calculator-btns .close-calculator-btn {
+  margin: 1rem 1rem;
+  padding: 0.5rem 1.5rem;
+  background-color: darkgrey;
+  border: none;
+  font-size: 1.6rem;
+}
+.popup-calculator .errors-calculator {
+  color: red;
+  font-size: 1.4rem;
+}
+.popup-calculator .calorie-result {
+  font-size: 2rem;
+}
+
+.gallery-popup-body {
+  position: fixed;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  z-index: 6;
+}
+.gallery-popup-body .gallery-popup {
+  height: 30rem;
+  width: 30rem;
+}
+.gallery-popup-body .gallery-popup img {
+  height: 100%;
+  width: 100%;
+  border: 0.5rem solid darkcyan;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.gallery-popup-body .gallery-popup .prev-img,
+.gallery-popup-body .gallery-popup .next-img,
+.gallery-popup-body .gallery-popup .close-image {
+  position: absolute;
+  border: none;
+  background: none;
+  color: white;
+  font-size: 3.6rem;
+}
+.gallery-popup-body .gallery-popup .prev-img i,
+.gallery-popup-body .gallery-popup .next-img i,
+.gallery-popup-body .gallery-popup .close-image i {
+  padding: 1rem;
+}
+.gallery-popup-body .gallery-popup .prev-img {
+  top: 50%;
+  left: 1rem;
+}
+.gallery-popup-body .gallery-popup .next-img {
+  top: 50%;
+  right: 1rem;
+}
+.gallery-popup-body .gallery-popup .close-image {
+  top: 6rem;
+  right: 0.5rem;
+}
+
+@media (min-width: 576px) {
+  .calendar-btn {
+    top: 6rem;
+  }
+  header .head-img .head-text {
+    left: 10%;
+    width: 50em;
+  }
+  main .diet .diet-category .diet-category-box {
+    height: 20rem;
+    width: 42rem;
+  }
+}
+@media (min-width: 768px) {
+  .burger-btn {
+    display: none;
+  }
+  nav {
+    justify-content: space-evenly;
+    position: fixed;
+    display: flex;
+    align-items: start;
+    flex-direction: row;
+    height: 60px;
+    line-height: 60px;
+  }
+  nav .logo-site {
+    display: flex;
+  }
+  nav .logo-site i,
+  nav .logo-site .site-title {
+    padding: 0 1rem;
+    font-size: 1.8rem;
+  }
+  nav .logo-site i {
+    font-size: 3.6rem;
+    line-height: 60px;
+    text-align: center;
+  }
+  nav .menu-items {
+    flex-direction: row;
+  }
+  nav .menu-items .item {
+    padding: 0 1.5rem;
+    font-size: 1.4rem;
+    transform: translateX(0);
+    transition: color 0.5s;
+    animation: none;
+  }
+  nav .menu-items .item:hover {
+    color: darkcyan;
+  }
+  main .run-calendar .calendar-events {
+    flex-direction: row;
+    margin-top: 5rem;
+  }
+  main .run-calendar .calendar-events .events-description {
+    width: 36rem;
+    height: 34.7rem;
+  }
+  main .diet .calorie-calculator {
+    flex-direction: row;
+  }
+  main .diet .calorie-calculator .calc-text {
+    width: 60%;
+    height: 6rem;
+    border-top-left-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+    border-top-right-radius: 0;
+    text-align: center;
+  }
+  main .diet .calorie-calculator .calc-text p {
+    padding: 0.5rem;
+  }
+  main .diet .calorie-calculator .calc-calorie-btn {
+    width: 10rem;
+    height: 6rem;
+    padding: 1.5rem 0;
+    border-top-right-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+    border-bottom-left-radius: 0;
+    cursor: pointer;
+  }
+  main .diet .diet-category {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 4rem;
+  }
+  main .diet .diet-category .diet-category-box {
+    height: 25rem;
+    width: 45%;
+    background-attachment: fixed;
+    transition: transform 0.5s;
+    cursor: pointer;
+  }
+  main .blog .blog-body {
+    flex-direction: row;
+    margin-bottom: 2rem;
+  }
+  main .blog .blog-body .blog-description {
+    justify-content: space-evenly;
+    margin: 0 3rem;
+    width: 100%;
+    height: 100%;
+  }
+  main .blog .blog-body .blog-description div {
+    margin-top: 0;
+  }
+  main .blog .blog-body .blog-description .blog-text {
+    padding: 1.5rem 0;
+    font-size: 1.6rem;
+  }
+  main .blog .blog-body img {
+    margin: 0 2rem 2rem 0;
+  }
+  main .gallery .gallery-body .gallery-images .gallery-img {
+    width: 30%;
+    height: 20rem;
+    border-radius: 1rem;
+    transition: transform 0.3s;
+    cursor: pointer;
+  }
+  main .gallery .gallery-body .gallery-images .gallery-img:hover {
+    transform: scale(1.02);
+  }
+  main .gallery .gallery-body .see-more-link {
+    font-size: 1.8rem;
+    transition: color 0.3s;
+  }
+  main .gallery .gallery-body .see-more-link:hover {
+    color: darkcyan;
+  }
+  .popup-calculator {
+    width: 60rem;
+    height: 44rem;
+  }
+  .popup-calculator label {
+    font-size: 1.6rem;
+  }
+  .popup-calculator .male-female #male,
+  .popup-calculator .male-female #female {
+    height: 2rem;
+    width: 2rem;
+  }
+  .popup-calculator .person-data #age,
+  .popup-calculator .person-data #weight,
+  .popup-calculator .person-data #height {
+    width: 6rem;
+  }
+  .popup-calculator #level-activity {
+    width: 480px;
+  }
+  .popup-calculator .calculator-btns .count-calorie-btn,
+  .popup-calculator .calculator-btns .close-calculator-btn {
+    margin: 4rem 1rem;
+    padding: 0.5rem 1.5rem;
+    background-color: darkgrey;
+    border: none;
+    font-size: 1.6rem;
+  }
+  .popup-calculator .errors-calculator {
+    color: red;
+    font-size: 1.4rem;
+  }
+  .popup-calculator .calorie-result {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 992px) {
+  header .head-img .head-text {
+    left: 15%;
+    width: 60em;
+  }
+  header .head-img .head-text .main-title {
+    font-size: 4.8rem;
+  }
+  header .head-img .head-text p {
+    padding-top: 2em;
+    font-size: 3rem;
+  }
+  main .run-calendar .calendar-events {
+    margin-top: 7rem;
+  }
+  main .run-calendar .calendar-events .events-description {
+    width: 50rem;
+  }
+  main .run-calendar .calendar-events .events-description .event-text {
+    padding: 1rem 2rem;
+    font-size: 2rem;
+  }
+  main .run-calendar .inactive-day {
+    opacity: 0.6;
+  }
+  main .gallery .gallery-body .gallery-images .gallery-img {
+    height: 26rem;
+    border-radius: 1.5rem;
+  }
+  main .gallery .gallery-body .see-more-btn {
+    font-size: 2.2rem;
+  }
+  .gallery-popup-body .gallery-popup {
+    height: 44rem;
+    width: 66rem;
+  }
+}/*# sourceMappingURL=style.css.map */

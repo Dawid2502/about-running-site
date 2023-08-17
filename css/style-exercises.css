@@ -1,0 +1,398 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Kanit", sans-serif;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 120rem;
+}
+
+.section-title {
+  padding-top: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.underline {
+  margin: 0 auto 40px;
+  width: 10rem;
+  height: 4px;
+  background-color: darkcyan;
+}
+
+.active {
+  display: flex;
+}
+
+.burger-btn {
+  top: 0.5rem;
+  right: 0.5rem;
+  color: black;
+  position: absolute;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 11;
+}
+.burger-btn .fa-bars,
+.burger-btn .fa-xmark {
+  padding: 0.5rem;
+  font-size: 3.6rem;
+}
+.burger-btn .hide {
+  display: none;
+  color: white;
+}
+
+nav {
+  position: absolute;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 10;
+  flex-direction: column-reverse;
+}
+nav .logo-site {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+nav .logo-site i {
+  padding-bottom: 1.5rem;
+  font-size: 6.4rem;
+}
+nav .logo-site .site-title {
+  margin: 0;
+  padding-bottom: 6rem;
+  color: white;
+  font-size: 4.8rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+nav .logo-site .site-title span {
+  color: darkcyan;
+}
+nav .menu-items {
+  display: flex;
+  flex-direction: column;
+}
+nav .menu-items .item {
+  padding: 1.5rem;
+  color: white;
+  font-size: 2.4rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  transform: translateX(60rem);
+  animation: menu-animation 2s forwards;
+}
+nav .menu-items .item:nth-child(1) {
+  animation-delay: 0.4s;
+}
+nav .menu-items .item:nth-child(2) {
+  animation-delay: 0.6s;
+}
+nav .menu-items .item:nth-child(3) {
+  animation-delay: 0.8s;
+}
+nav .menu-items .item:nth-child(4) {
+  animation-delay: 1s;
+}
+nav .menu-items .item:nth-child(5) {
+  animation-delay: 1.2s;
+}
+nav .menu-items .item:nth-child(6) {
+  animation-delay: 1.4s;
+}
+@keyframes menu-animation {
+  from {
+    transform: translateX(60rem);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+nav .return-site {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding-left: 1rem;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+nav .return-site:hover {
+  color: darkcyan;
+}
+
+main .preparatory-exercises .prepare-exercise-body {
+  margin: 3rem;
+}
+main .preparatory-exercises .prepare-exercise-body .prepare-description {
+  font-size: 1.4rem;
+}
+main .preparatory-exercises .prepare-exercise-body .exercises-box {
+  display: flex;
+  justify-content: space-between;
+}
+main .preparatory-exercises .prepare-exercise-body .exercises-box ul {
+  margin-left: 4rem;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+main .preparatory-exercises .prepare-exercise-body .exercises-box ul li {
+  padding: 0.7rem;
+}
+main .preparatory-exercises .prepare-exercise-body .exercises-box img {
+  margin-right: 4rem;
+  height: 240px;
+}
+main .training .training-body {
+  display: flex;
+  flex-direction: column;
+}
+main .training .training-body .training-description {
+  font-size: 1.4rem;
+  text-align: center;
+}
+main .training .training-body .training-exercises {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+main .training .training-body .training-exercises img {
+  margin-top: 3rem;
+  width: 20rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .training .training-body .training-exercises .exercise-description {
+  padding: 0 1rem;
+}
+main .training .training-body .training-exercises .exercise-description .exercise-box {
+  margin: 1.5rem;
+  width: 30rem;
+  border: 1px solid #333;
+  border-radius: 1.5rem;
+  text-align: center;
+}
+main .training .training-body .training-exercises .exercise-description .exercise-box h3,
+main .training .training-body .training-exercises .exercise-description .exercise-box p {
+  padding: 1rem 2rem;
+}
+main .training-plans {
+  margin-bottom: 2rem;
+}
+main .training-plans .all-plans-body {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-bottom: 5rem;
+}
+main .training-plans .all-plans-body .plan-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem;
+  width: 30rem;
+  background-color: white;
+  border-radius: 1.5rem;
+  box-shadow: 0.8rem 0.8rem 2.4rem 0 rgb(66, 68, 90);
+}
+main .training-plans .all-plans-body .plan-box .plan-training-img {
+  padding-top: 1.5rem;
+  height: 15rem;
+}
+main .training-plans .all-plans-body .plan-box .plan-training-text {
+  position: relative;
+  text-align: center;
+  font-size: 1.4rem;
+}
+main .training-plans .all-plans-body .plan-box .plan-training-text .plan-title {
+  padding: 1rem 3rem;
+  text-transform: uppercase;
+}
+main .training-plans .all-plans-body .plan-box .plan-training-text .text-item {
+  padding: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+main .training-plans .all-plans-body .plan-box .plan-training-text .text-item span {
+  padding-left: 1rem;
+  color: cadetblue;
+  font-weight: 300;
+}
+main .training-plans .all-plans-body .plan-box .plan-training-text .text-item:last-child {
+  padding-bottom: 3rem;
+}
+main .training-plans .all-plans-body .plan-box .plan-training-text::before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 0.2rem;
+  width: 100%;
+  background-color: rgba(90, 89, 89, 0.7);
+  content: "";
+  z-index: 100;
+}
+main .training-plans .all-plans-body .plan-box .fa-eye {
+  padding-top: 0.5rem;
+  font-size: 3.6rem;
+  cursor: pointer;
+  z-index: 10;
+}
+main .training-plans .all-plans-body .plan-box .plan-description {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  color: white;
+  border-radius: 1.5rem;
+  font-size: 1.2rem;
+  -webkit-clip-path: circle(0 at 50% 90%);
+          clip-path: circle(0 at 50% 90%);
+  transition: 1s;
+}
+main .training-plans .all-plans-body .plan-box .plan-description p {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+main .training-plans .all-plans-body .plan-box .plan-description .type {
+  font-size: 1.6rem;
+}
+main .training-plans .all-plans-body .plan-box .plan-description .type span {
+  padding: 1rem;
+  color: darkcyan;
+}
+main .training-plans .all-plans-body .plan-box .plan-description li {
+  padding: 1rem;
+  padding-bottom: 3rem;
+}
+main .training-plans .all-plans-body .plan-box .plan-description table tr td {
+  padding: 0.5rem 0.7rem;
+  text-align: center;
+}
+main .training-plans .all-plans-body .plan-box .fa-eye:hover ~ .plan-description {
+  -webkit-clip-path: circle(120% at 50% 90%);
+          clip-path: circle(120% at 50% 90%);
+}
+
+footer {
+  margin-top: 10px;
+  background: rgb(44, 43, 43);
+}
+footer p {
+  margin: 0;
+  padding: 1.5rem;
+  color: white;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+@media (min-width: 576px) {
+  main .training .training-body .training-exercises .exercise-description .exercise-box {
+    width: 50rem;
+  }
+}
+@media (min-width: 768px) {
+  .burger-btn {
+    display: none;
+  }
+  nav {
+    justify-content: flex-end;
+    position: fixed;
+    display: flex;
+    align-items: start;
+    flex-direction: row;
+    height: 60px;
+    line-height: 60px;
+  }
+  nav .logo-site {
+    margin-right: 2rem;
+  }
+  nav .menu-items {
+    margin-right: 5rem;
+  }
+  nav .return-site {
+    top: 0;
+    left: 0;
+    padding-left: 3rem;
+  }
+  nav .logo-site {
+    display: flex;
+  }
+  nav .logo-site i,
+  nav .logo-site .site-title {
+    padding: 0 1rem;
+    font-size: 1.8rem;
+  }
+  nav .logo-site i {
+    font-size: 3.6rem;
+    line-height: 60px;
+    text-align: center;
+  }
+  nav .menu-items {
+    flex-direction: row;
+  }
+  nav .menu-items .item {
+    padding: 0 1.5rem;
+    font-size: 1.4rem;
+    transform: translateX(0);
+    transition: color 0.5s;
+    animation: none;
+  }
+  nav .menu-items .item:hover {
+    color: darkcyan;
+  }
+  main {
+    margin-top: 10rem;
+  }
+  main .training .training-body .training-exercises {
+    display: flex;
+    flex-direction: row;
+  }
+  main .training .training-body .training-exercises img {
+    width: 24rem;
+  }
+  main .training .training-body .training-exercises .exercise-description .exercise-box {
+    width: 46rem;
+  }
+  main .training .training-body .run-exercises {
+    flex-direction: row-reverse;
+  }
+}
+@media (min-width: 992px) {
+  main .training .training-body .training-exercises img {
+    width: 28rem;
+  }
+  main .training .training-body .training-exercises .exercise-description .exercise-box {
+    width: 62rem;
+  }
+}/*# sourceMappingURL=style-exercises.css.map */

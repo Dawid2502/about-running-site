@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RunWithUs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/f4b33a4485.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <button class="burger-btn"><i class="fa-solid fa-bars"></i><i class="fa-solid fa-xmark hide"></i></button>
+
+    <nav>
+        <div class="logo-site">
+            <i class="fa-regular fa-handshake"></i>
+            <a href="index.html" class="site-title">Run<span>With</span>Us</a>
+        </div>
+        <div class="menu-items">
+            <a href="#exercises-section" class="item">Ćwiczenia</a>
+            <a href="#run-calendar" class="item">Kalendarz biegów</a>
+            <a href="#diet-section" class="item">Dieta</a>
+            <a href="#blog-section" class="item">Blog</a>
+            <a href="#gallery-section" class="item">Galeria</a>
+        </div>
+    </nav>
+
+    <header>
+        <div class="head-img">
+            <div class="head-text">
+                <h1 class="main-title"><span>Lorem,</span> ipsum dolor.</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, cumque!</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Sekcja o rodzaju ćwiczeń dla biegacza. Zrobiona za pomocą Bootstrap. Dla urządzeń o rozdzielczośći poniżej 992 px bedą dostepne 3 karty a dla urżadzeń powyżej 992 px tzw. Carousel -->
+        <section id="exercises-section" class="exercises-section">
+
+            <h2 class="section-title">Ćwiczenia</h2>
+            <div class="underline"></div>
+
+            <div class="card-group d-lg-none">
+                <div class="card m-3">
+                    <img src="./image/portrait-g53774619f_1280.jpg" class="card-img-top" alt="Kobieta ćwicząca na macie">
+                    <div class="card-body">
+                        <a href="training.html#prepare-exercises">
+                            <h5 class="card-title">Rozgrzewka</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p></a>
+                    </div>
+                </div>
+                <div class="card m-3">
+                    <img src="./image/cardio_big.jpg" class="card-img-top" alt="Kobieta biegnie przez las">
+                    <div class="card-body">
+                        <a href="training.html#prepare-exercises">
+                            <h5 class="card-title">Trening biegowy</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p></a>
+                    </div>
+                </div>
+                <div class="card m-3">
+                    <img src="./image/dumbbells-gbf227f956_1920.jpg" class="card-img-top" alt="Kettle na siłowni">
+                    <div class="card-body">
+                        <a href="training.html#prepare-exercises">
+                            <h5 class="card-title">Trening siłowy</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wrapper">
+                <div id="carouselExampleCaptions" class="carousel slide d-none d-lg-block" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="image/portrait-g53774619f_1280.jpg" class="d-block w-100" alt="Kobieta biega">
+                            <div class="carousel-caption d-none d-md-block">
+                                <a href="training.html#prepare-exercises">
+                                    <h5 class="card-title">Rozgrzewka</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                    additional content. This content is a little bit longer.</p></a>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="image/cardio_big.jpg" class="d-block w-100" alt="stojak z hantlami">
+                            <div class="carousel-caption d-none d-md-block">
+                                <a href="training.html#prepare-exercises">
+                                    <h5 class="card-title">Trening biegowy</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                    additional content. This content is a little bit longer.</p></a>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="image/dumbbells-gbf227f956_1920.jpg" class="d-block w-100" alt="trenująca kobieta">
+                            <div class="carousel-caption d-none d-md-block">
+                                <a href="training.html#prepare-exercises">
+                                    <h5 class="card-title">Trening siłowy</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                    additional content. This content is a little bit longer.</p></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+
+        </section>
+<!-- Kalendarz z biegami. Po kliknięciu w niektóre dni wyświetli się wydarzenie. -->
+        <section class="run-calendar" id="run-calendar">
+            <h2 class="section-title">Kalendarz biegów</h2>
+            <div class="underline"></div>
+
+            <div class="wrapper">
+                <div class="calendar-events">
+                    <div class="calendar">
+                        <div class="current-date">
+                            <i class="fa-solid fa-chevron-left"></i>
+                            <h2 class="month">Maj</h2>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </div>
+                        <ul class="cal-weekdays">
+                            <li class="weekday">Pon</li>
+                            <li class="weekday">Wt</li>
+                            <li class="weekday">Śr</li>
+                            <li class="weekday">Czw</li>
+                            <li class="weekday">Pt</li>
+                            <li class="weekday">Sob</li>
+                            <li class="weekday">Nd</li>
+                        </ul>
+                        <ul class="month-days">
+                        </ul>
+                    </div>
+                    <div class="events-description">
+                        <p class="event-text"></p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="diet" id="diet-section">
+            <h2 class="section-title">Dieta</h2>
+            <div class="underline"></div>
+            <div class="wrapper">
+                <div class="calorie-calculator">
+                    <div class="calc-text">
+                        <h3 class="calc-title">Kalkulator kalorii</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, enim.</p>
+                    </div>
+                    <button class="calc-calorie-btn">Oblicz</button>
+                </div>
+                <div class="diet-category">
+                    <div class="diet-category-box breakfast">
+                        <div class="diet-category-bg"></div>
+                        <div class="diet-category-text">
+                            <p><a href="breakfast.html">Śniadanie</a></p>
+                        </div>
+                    </div>
+                    <div class="diet-category-box dinner">
+                        <div class="diet-category-bg"></div>
+                        <div class="diet-category-text">
+                            <p><a href="dinner.html">Obiad</a></p>
+                        </div>
+                    </div>
+                    <div class="diet-category-box afterDinner">
+                        <div class="diet-category-bg"></div>
+                        <div class="diet-category-text">
+                            <p><a href="after-dinner.html">Kolacja</a></p>
+                        </div>
+                    </div>
+                    <div class="diet-category-box afterTraining">
+                        <div class="diet-category-bg"></div>
+                        <div class="diet-category-text">
+                            <p><a href="after-training.html">Po treningu</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Sekcja Blog -->
+        <section class="blog" id="blog-section">
+            <h2 class="section-title">Blog</h2>
+            <div class="underline"></div>
+            <div class="wrapper">
+                <div class="blog-body">
+                    <div class="blog-description">
+                        <div>
+                            <p>Porady</p>
+                            <p>Opinie</p>
+                            <p>Inspiracje</p>
+                        </div>
+                        <p class="blog-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed quo et rem
+                            nemo quod perferendis deleniti omnis amet? Officia atque accusamus totam doloremque id
+                            dolore reprehenderit exercitationem suscipit possimus nam.</p>
+                        <button class="blog-btn" onclick="btnOpenBlog()">Przejdź dalej</button>
+                    </div>
+                    <img src="image/dumbbells-ga25b9a99a_640.jpg" alt="But i hantelki">
+                </div>
+            </div>
+        </section>
+        <!-- Sekcja galeria. Po wejściu w galerię i kliknięciu w zdjęcie pojawi się jego Popup -->
+        <section class="gallery" id="gallery-section">
+            <h2 class="section-title">Galeria</h2>
+            <div class="underline"></div>
+            <div class="wrapper">
+                <div class="gallery-body">
+                    <div class="gallery-images">
+                        <img class="gallery-img imag" src="image/gallery/to-run-g6f74211bb_640.jpg"
+                            alt="mężczyzna biega jesienią">
+                        <img class="gallery-img imag" src="image/gallery/runners-g9f82bd264_640.jpg"
+                            alt="biegaczę biegnący w wyścigu">
+                        <img class="gallery-img imag" src="image/gallery/motivation-g344f4e7bd_640.jpg"
+                            alt="mężczyzna biegnący przez wodę">
+                    </div>
+                    <a href="gallery.html" class="see-more-link">Zobacz więcej>>></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023| RunWithUs Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, facilis!</p>
+    </footer>
+
+    <div class="gallery-popup-body">
+        <div class="gallery-popup">
+            <img class="popup-image" src="image/gallery/run-g5d12690a2_640.jpg" alt="">
+            <button class="prev-img"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="next-img"><i class="fa-solid fa-chevron-right"></i></button>
+            <button class="close-image"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+    </div>
+
+    <!-- Kalkulator kalorii -->
+    <div class="popup-calculator">
+        <h2 class="calculator-title">Kalkulator kalorii</h2>
+
+        <div class="male-female">
+            <label for="male">mężczyzna</label>
+            <input type="radio" id="male" name="person" value="man">
+            <label for="female">kobieta</label>
+            <input type="radio" id="female" name="person" value="woman">
+        </div>
+
+        <div class="person-data">
+            <label for="age">Wiek</label>
+            <input type="number" id="age">
+
+            <label for="weight">Waga[kg]</label>
+            <input type="number" id="weight">
+
+            <label for="height">Wzrost[cm]</label>
+            <input type="number" id="height">
+
+        </div>
+        <label for="level-activity">Aktywność fizyczna</label>
+        <select id="level-activity" onchange="chooseActivity()">
+            <option value="none" selected disabled>---Wybierz---</option>
+            <option value="0">brak aktywności fizycznej, zawodowej</option>
+            <option value="1">lekka aktywność, lekka praca np. biurowa </option>
+            <option value="2">średnia aktywność, Pracownik biurowy, trenujący 2-3 razy w tygodniu przez minimum godzinę
+            </option>
+            <option value="3">Pracownik biurowy, trenujący 3-4 razy w tygodniu przez minimum godzinę</option>
+            <option value="4">Zawodowy sportowiec, trenujący minimum 6 godzin tygodniowo lub osoba ciężko pracująca
+                fizycznie</option>
+        </select>
+
+        <label for="body-goal">Co chcesz zrobić?</label>
+        <select id="body-goal" onchange="chooseBodyGoal()">
+            <option value="none" selected disabled>---Wybierz---</option>
+            <option value="0">Schudnąć</option>
+            <option value="1">Utrzymać wagę </option>
+            <option value="2">Przytyć </option>
+        </select>
+        <div class="calculator-btns">
+            <button class="count-calorie-btn">Oblicz</button>
+            <button class="close-calculator-btn">Zamknij</button>
+        </div>
+        <p class="errors-calculator"></p>
+        <p class="calorie-result"></p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+
+    <script src="../js/galleryScript.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

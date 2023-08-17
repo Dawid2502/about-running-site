@@ -1,0 +1,483 @@
+@import './mixins';
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	height: 100vh;
+	font-family: 'Kanit', sans-serif;
+}
+
+.wrapper {
+	margin: 0 auto;
+	max-width: 120rem;
+}
+
+.paragraph-title {
+	padding: 2rem 1rem 2rem 1rem;
+	font-size: 1.8rem;
+}
+
+.box {
+	margin-top: 3rem;
+}
+
+nav {
+	@include nav-article;
+}
+
+main {
+	//Article 1
+	margin-top: 2rem;
+	h1 {
+		padding-bottom: 2rem;
+		text-align: left;
+		font-size: 3rem;
+		text-align: center;
+	}
+	.introduction {
+		display: flex;
+		align-items: center;
+		flex-direction: column-reverse;
+		margin-top: 2rem;
+		.intro-text {
+			padding: 1.5rem;
+			font-size: 1.2rem;
+			line-height: 2rem;
+		}
+		.intro-img {
+			margin: 1.5rem;
+			width: 30rem;
+		}
+	}
+	.contents {
+		display: flex;
+		flex-direction: column;
+		.paragraphs {
+			.paragraph {
+				padding: 0.5rem;
+				padding-left: 1rem;
+				font-size: 1.2rem;
+				list-style: none;
+				a {
+					color: black;
+					text-decoration: none;
+					transition: text-decoration 0.5s;
+					cursor: pointer;
+				}
+				a:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+	.watch-price {
+		p {
+			padding: 1rem;
+			font-size: 1rem;
+		}
+		.img-box {
+			display: flex;
+			justify-content: space-evenly;
+			align-items: center;
+			margin: 3rem 0;
+			img {
+				width: 12rem;
+			}
+		}
+	}
+	.watch-function {
+		p {
+			margin-bottom: 1rem;
+			padding: 1rem;
+		}
+		.function-box {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			margin: 1rem;
+			border: 1px solid black;
+			border-radius: 1.5rem;
+			.text-box {
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
+				h3 {
+					padding: 0.5rem;
+					text-align: center;
+				}
+				p {
+					margin: 0;
+				}
+			}
+			img {
+				margin: 1rem;
+				width: 6rem;
+				height: 6rem;
+			}
+		}
+	}
+	.summary {
+		p {
+			font-size: 1rem;
+			line-height: 1.6rem;
+			padding: 1rem;
+		}
+	}
+
+	///////////////////////////////////////////
+	/// Article 2
+	.type-of-diet {
+		.diet-types {
+			li {
+				margin: 1rem;
+				line-height: 1.8rem;
+				p {
+					padding: 0.5rem 0;
+					font-weight: bold;
+				}
+			}
+		}
+	}
+	.macro-sources {
+		.macro-type {
+			display: flex;
+			margin: 1rem;
+			.sources-list {
+				margin: 1rem;
+				h3 {
+					padding: 1rem 0;
+				}
+				ul {
+					margin-top: 1rem;
+					margin-left: 1.5rem;
+				}
+				p,
+				li {
+					line-height: 1.8rem;
+				}
+			}
+			img {
+				width: 10rem;
+				object-fit: cover;
+			}
+		}
+		.proteins {
+			flex-direction: row-reverse;
+		}
+	}
+	.diet-tips {
+		margin: 1rem 1rem 1rem 1.5rem;
+		ol {
+			li {
+				margin: 1rem;
+				line-height: 1.8rem;
+				span {
+					font-weight: bold;
+				}
+			}
+		}
+	}
+	//////////////////////////////
+	/// Article3
+	.training-type {
+		@include training-mobile;
+		.training-body {
+			.training-description {
+				font-size: 1.0rem;
+			}
+		}
+	}
+	.training-plan {
+		table {
+			margin: 0 2rem;
+			text-align: center;
+			thead {
+				color: white;
+				background-color: #333;
+				font-weight: bold;
+				td {
+					height: 4rem;
+				}
+			}
+			tbody {
+				td {
+					padding: 1rem;
+					width: 10rem;
+					border: 1px solid black;
+				}
+			}
+		}
+	}
+	.breath-tips {
+		p {
+			padding: 1rem;
+			line-height: 1.8rem;
+			// font-size: 1.2rem;
+		}
+	}
+	///Article4
+	.run-equipment {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		p {
+			margin-top: 2rem;
+			padding: 1rem;
+			line-height: 1.8rem;
+		}
+		.img-equipment {
+			margin: 0.5rem;
+			width: 26rem;
+		}
+	}
+}
+
+footer {
+	@include footer;
+}
+
+@media (min-width: 576px) {
+	nav {
+		height: 6rem; 
+		line-height: 6rem; 
+		.logo-site {
+			.site-title {
+				font-size: 1.8rem; 
+			}
+			i {
+				font-size: 3.6rem; 
+				line-height: 6rem; 
+			}
+		}
+		.menu-items {
+			.item {
+				font-size: 1.8rem; 
+			}
+		}
+		.return-site {
+			font-size: 1.8rem; 
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	main {
+		.introduction {
+			.intro-text {
+				font-size: 1.2rem;
+			}
+			.intro-img {
+				margin: 1.5rem;
+				width: 36rem;
+			}
+		}
+
+		.watch-price {
+			p {
+				font-size: 1.2rem;
+				line-height: 1.8rem;
+			}
+			.img-box {
+				img {
+					width: 20rem;
+				}
+			}
+		}
+		.watch-function {
+			p {
+				margin-bottom: 3rem;
+			}
+			.function-box {
+				.text-box {
+					h3 {
+						font-size: 1.4rem;
+					}
+					p {
+						font-size: 1.2rem;
+						line-height: 1.8rem;
+					}
+				}
+				img {
+					width: 16rem;
+					height: 16rem;
+					object-fit: cover;
+				}
+			}
+		}
+		.summary {
+			p {
+				font-size: 1.2rem;
+				line-height: 1.8rem;
+			}
+		}
+		////Article2
+		.type-of-diet {
+			.diet-types {
+				li {
+					margin: 1rem;
+					font-size: 1.2rem;
+				}
+			}
+		}
+		.macro-sources {
+			.macro-type {
+				margin: 2rem;
+				.sources-list {
+					margin: 2rem;
+					p,
+					li {
+						font-size: 1.2rem;
+					}
+				}
+				img {
+					width: 16rem;
+				}
+			}
+		}
+
+		.diet-tips {
+			ol {
+				li {
+					font-size: 1.2rem;
+				}
+			}
+		}
+		////Article3
+		.training-type {
+			@include training-768;
+		}
+		.breath-tips {
+			p {
+				font-size: 1.2rem;
+			}
+		}
+		////Article4
+		.run-equipment {
+			p {
+				font-size: 1.2rem;
+			}
+			.img-equipment {
+				width: 54rem;
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	main {
+		.introduction {
+			align-items: center;
+			flex-direction: row;
+			.intro-text {
+				font-size: 1.4rem;
+			}
+			.intro-img {
+				width: 46rem;
+			}
+		}
+		.contents {
+			.paragraphs {
+				.paragraph {
+					font-size: 1.4rem;
+				}
+			}
+		}
+		.watch-price {
+			p {
+				font-size: 1.4rem;
+			}
+			.img-box {
+				img {
+					width: 24rem;
+				}
+			}
+		}
+		.watch-function {
+			p {
+				font-size: 1.4rem;
+			}
+			.function-box {
+				flex-direction: row;
+				.text-box {
+					h3 {
+						font-size: 1.4rem;
+					}
+					p {
+						font-size: 1.2rem;
+					}
+				}
+				img {
+					width: 16rem;
+					height: 14rem;
+					object-fit: cover;
+				}
+			}
+		}
+		.summary {
+			p {
+				font-size: 1.4rem;
+			}
+		}
+		////Article2
+		.type-of-diet {
+			.diet-types {
+				li {
+					margin: 1rem;
+					font-size: 1.4rem;
+				}
+			}
+		}
+		.macro-sources {
+			.macro-type {
+				margin: 3rem;
+				.sources-list {
+					margin: 2rem;
+					p,
+					li {
+						font-size: 1.4rem;
+					}
+				}
+				img {
+					width: 20rem;
+				}
+			}
+		}
+
+		.diet-tips {
+			ol {
+				li {
+					font-size: 1.4rem;
+				}
+			}
+		}
+		/////Article3
+		.training-type {
+			@include training-992;
+		}
+		.breath-tips {
+			p {
+				font-size: 1.4rem;
+			}
+		}
+		/////Article4
+		.run-equipment {
+			p {
+				font-size: 1.4rem;
+			}
+			.img-equipment {
+				width: 64rem;
+			}
+		}
+	}
+}

@@ -1,0 +1,231 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  background-color: rgb(236, 235, 235);
+}
+
+nav {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  height: 6rem;
+  line-height: 6rem;
+}
+nav .return-site {
+  padding-left: 1rem;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+nav .return-site:hover {
+  color: darkcyan;
+}
+nav .logo-site {
+  display: flex;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  color: white;
+  text-align: center;
+}
+nav .logo-site i {
+  padding: 0 1rem;
+  line-height: 6rem;
+  font-size: 2.8rem;
+}
+nav .logo-site .site-title {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+nav .logo-site .site-title span {
+  color: darkcyan;
+}
+
+main .gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(auto-fit, 20rem);
+  gap: 1rem;
+  margin: 2rem;
+}
+main .gallery img {
+  width: 100%;
+  height: 100%;
+  border-radius: 1.5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+main .gallery .img-1 {
+  grid-column: 1/2;
+  grid-row: 1/3;
+  background-color: aquamarine;
+}
+main .gallery .img-2 {
+  grid-column: 2/3;
+  background-color: aqua;
+}
+main .gallery .img-3 {
+  grid-column: 1/2;
+  grid-row: 3/4;
+  background-color: cadetblue;
+}
+main .gallery .img-4 {
+  grid-row: 2/4;
+  background-color: rgb(56, 84, 85);
+}
+main .gallery .img-5 {
+  grid-column: 1/3;
+  background-color: cornflowerblue;
+}
+main .gallery .img-6 {
+  background-color: lightskyblue;
+}
+main .gallery .img-7 {
+  background-color: cyan;
+}
+main .gallery .img-8 {
+  grid-row: 6/8;
+  background-color: rgb(152, 234, 236);
+}
+main .gallery .img-9 {
+  background-color: rgb(3, 59, 61);
+}
+main .gallery .img-10 {
+  grid-row: 7/9;
+  background-color: rgb(73, 124, 156);
+}
+main .gallery .img-11 {
+  background-color: rgb(7, 129, 204);
+}
+main .gallery .img-12 {
+  background-color: rgb(70, 85, 95);
+}
+
+.gallery-popup-body {
+  position: fixed;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+.gallery-popup-body .gallery-popup {
+  height: 30rem;
+  width: 30rem;
+}
+.gallery-popup-body .gallery-popup img {
+  height: 100%;
+  width: 100%;
+  border: 0.5rem solid darkcyan;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.gallery-popup-body .gallery-popup .prev-img,
+.gallery-popup-body .gallery-popup .next-img,
+.gallery-popup-body .gallery-popup .close-image {
+  position: absolute;
+  border: none;
+  background: none;
+  color: white;
+  font-size: 3.6rem;
+}
+.gallery-popup-body .gallery-popup .prev-img i,
+.gallery-popup-body .gallery-popup .next-img i,
+.gallery-popup-body .gallery-popup .close-image i {
+  padding: 1rem;
+}
+.gallery-popup-body .gallery-popup .prev-img {
+  top: 50%;
+  left: 1rem;
+}
+.gallery-popup-body .gallery-popup .next-img {
+  top: 50%;
+  right: 1rem;
+}
+.gallery-popup-body .gallery-popup .close-image {
+  top: 0.3rem;
+  right: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  nav {
+    position: relative;
+  }
+  main .gallery {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 20rem);
+  }
+  main .gallery img {
+    cursor: pointer;
+  }
+  main .gallery .img-1 {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    background-color: aquamarine;
+  }
+  main .gallery .img-2 {
+    grid-column: 3/4;
+    background-color: aqua;
+  }
+  main .gallery .img-3 {
+    grid-column: 4/5;
+    grid-row: 1/3;
+    background-color: cadetblue;
+  }
+  main .gallery .img-4 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    background-color: rgb(56, 84, 85);
+  }
+  main .gallery .img-5 {
+    grid-column: 2/4;
+    grid-row: 2/4;
+    background-color: cornflowerblue;
+  }
+  main .gallery .img-7 {
+    grid-column: 1/2;
+    grid-row: 4/6;
+    background-color: cyan;
+  }
+  main .gallery .img-8 {
+    grid-row: 5/6;
+    background-color: rgb(152, 234, 236);
+  }
+  main .gallery .img-10 {
+    grid-column: 3/5;
+    grid-row: 4/5;
+    background-color: rgb(73, 124, 156);
+  }
+}
+@media (min-width: 1200px) {
+  .wrapper {
+    margin: 0 auto;
+    width: 120rem;
+  }
+  .gallery-popup-body .gallery-popup {
+    height: 44rem;
+    width: 66rem;
+  }
+}/*# sourceMappingURL=style-gallery.css.map */
